@@ -1,0 +1,23 @@
+@media screen and (min-width: 480px) {
+  /* ----------HERO---------- */
+  .hero {
+    width: 428px;
+  }
+
+  /* ----------BENEFITS---------- */
+  .benefits {
+    width: 428px;
+  }
+
+  /* -----------TEAM---------------- */
+  .team {
+    width: 428px;
+  }
+
+  /* ----------CUSTOMERS-------------- */
+  .customers {
+    width: 428px;
+  }
+
+  /* -----------FOOTER---------------- */
+}

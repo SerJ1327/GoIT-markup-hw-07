@@ -1,0 +1,79 @@
+@media screen and (min-width: 768px) {
+  /* ----------HERO---------- */
+  .hero {
+    width: 768px;
+    padding-bottom: 108px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/dark_bg_tablet_1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/dark_bg_tablet_2x.jpg);
+    }
+  }
+
+  .hero-title {
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 40px;
+  }
+
+  /* ----------BENEFITS---------- */
+  .benefits {
+    width: 768px;
+  }
+
+  .benefits-wrap {
+    gap: 24px;
+    row-gap: 72px;
+  }
+
+  .benefits-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .benefits-item > .main-title {
+    text-align: left;
+  }
+
+  /* -----------TEAM---------------- */
+  .team {
+    width: 768px;
+    padding-bottom: 104px;
+  }
+
+  .team-list {
+    gap: 24px;
+    row-gap: 64px;
+  }
+
+  /* ----------CUSTOMERS-------------- */
+  .customers {
+    width: 768px;
+  }
+  .customers-list {
+    gap: 24px;
+    row-gap: 72px;
+  }
+
+  .customers-item {
+    width: 168px;
+  }
+
+  .customers-item-icon {
+    width: 104px;
+  }
+
+  /* -----------FOOTER---------------- */
+}
