@@ -1,7 +1,27 @@
 @media screen and (min-width: 1200px) {
+  .header,
+  .hero,
+  .benefits,
+  .examples,
+  .team,
+  .customers,
+  .footer,
+  .portfolio {
+    width: 1440px;
+  }
+
+  /* ----------HEADER---------- */
+  .header-address-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
   /* ----------HERO---------- */
   .hero {
-    width: 1440px;
     padding-top: 188px;
     padding-bottom: 188px;
     background-image: linear-gradient(
@@ -30,7 +50,6 @@
 
   /* ----------BENEFITS---------- */
   .benefits {
-    width: 1440px;
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -81,7 +100,6 @@
   /* -----------EXAMPLES------------ */
   .examples {
     display: block;
-    width: 1440px;
     padding-bottom: 120px;
     margin: 0 auto;
   }
@@ -102,17 +120,70 @@
 
   /* -----------TEAM---------------- */
   .team {
-    width: 1440px;
     padding-top: 120px;
     padding-bottom: 120px;
   }
 
   /* ----------CUSTOMERS-------------- */
   .customers {
-    width: 1440px;
     padding-top: 120px;
     padding-bottom: 120px;
   }
 
   /* -----------FOOTER---------------- */
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer-conteiner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-text-link-thumb {
+    gap: 120px;
+  }
+
+  .footer-form {
+    flex-direction: column;
+    justify-content: right;
+    flex-wrap: nowrap;
+  }
+
+  .footer-text {
+    margin-bottom: 0;
+  }
+
+  .footer-link-list {
+    margin-bottom: 0;
+  }
+
+  /* -----------PORTFOLIO-PAGE---------------- */
+  .portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio-button-list {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .portfolio-button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .portfolio-example-list {
+    row-gap: 48px;
+    margin-top: 72px;
+  }
+
+  .portfolio-example-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
 }

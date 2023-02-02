@@ -1,23 +1,28 @@
 @media screen and (min-width: 480px) {
-  /* ----------HERO---------- */
-  .hero {
+  .header,
+  .hero,
+  .benefits,
+  .team,
+  .customers,
+  .footer,
+  .portfolio {
     width: 428px;
   }
 
-  /* ----------BENEFITS---------- */
-  .benefits {
-    width: 428px;
-  }
-
-  /* -----------TEAM---------------- */
-  .team {
-    width: 428px;
+  .mob-menu-tel-link {
+    font-size: 36px;
   }
 
   /* ----------CUSTOMERS-------------- */
-  .customers {
-    width: 428px;
+
+  .customers-item {
+    width: 190px;
+    height: 88px;
   }
 
-  /* -----------FOOTER---------------- */
+  .modal {
+    width: 408px;
+  }
+
+  /* -----------PORTFOLIO-PAGE---------------- */
 }

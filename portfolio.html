@@ -16,6 +16,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
 
   <body>
@@ -28,17 +31,17 @@
 
           <ul class="header-list list">
             <li class="header-item">
-              <a href="./index.html" class="header-link transition"> Studio </a>
+              <a href="./index.html" class="header-link">Studio </a>
             </li>
             <li class="header-item">
               <a
                 href="./portfolio.html"
-                class="header-link transition link-active"
+                class="header-link link-active transition"
                 >Portfolio
               </a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link transition"> Contacts </a>
+              <a href="#" class="header-link"> Contacts </a>
             </li>
           </ul>
         </nav>
@@ -62,6 +65,93 @@
             </li>
           </ul>
         </address>
+
+        <button class="mobile-menu-button transition" data-menu-open>
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/logo.svg#icon-hamburger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu is-hidden" data-menu>
+        <div class="mob-menu-container">
+          <button class="mob-menu-close transition" data-menu-close>
+            <svg class="mob-menu-close-icon" width="8" height="8">
+              <use href="./images/logo.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <nav>
+            <ul class="mob-menu-list list">
+              <li class="mob-menu-item">
+                <a
+                  href="./index.html"
+                  class="mob-menu-link link-active transition"
+                  >Studio
+                </a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="./portfolio.html" class="mob-menu-link">Portfolio </a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="#" class="mob-menu-link"> Contacts </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="mob-menu-thumb">
+            <address class="mob-menu-adress">
+              <ul class="mob-menu-address-list list">
+                <li class="mob-menu-address-item">
+                  <a
+                    href="tel:+110001111111"
+                    class="mob-menu-tel-link link-design transition"
+                  >
+                    +11 (000) 111-11-11
+                  </a>
+                </li>
+                <li class="mob-menu-address-item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="mob-menu-email-link link transition"
+                    >info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+            </address>
+
+            <ul class="mob-menu-link-list list">
+              <li class="mob-menu-link-item">
+                <a href="#" class="mob-menu-soc-link transition">
+                  <svg class="mob-menu-soc-icon" width="24" height="24">
+                    <use href="./images/logo.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-menu-link-item">
+                <a href="#" class="mob-menu-soc-link transition">
+                  <svg class="mob-menu-soc-icon" width="24" height="24">
+                    <use href="./images/logo.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-menu-link-item">
+                <a href="#" class="mob-menu-soc-link transition">
+                  <svg class="mob-menu-soc-icon" width="24" height="24">
+                    <use href="./images/logo.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-menu-link-item">
+                <a href="#" class="mob-menu-soc-link transition">
+                  <svg class="mob-menu-soc-icon" width="24" height="24">
+                    <use href="./images/logo.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -101,12 +191,34 @@
             <li class="portfolio-example-item transition">
               <a href="#" class="portfolio-example-link">
                 <div class="portfolio-overlay-thumb">
-                  <img
-                    src="./images/portfolio/example_1.jpg"
-                    alt="Example app"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/example_1_1x.jpg 1x,
+                        ./images/portfolio/example_1_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_1_tablet_1x.jpg 1x,
+                        ./images/portfolio/example_1_tablet_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_1_mobile_1x.jpg 1x,
+                        ./images/portfolio/example_1_mobile_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/example_1_1x.jpg"
+                      alt="Example app"
+                      width="396"
+                    />
+                  </picture>
                   <p class="portfolio-overlay transition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores vitae assumenda non consequuntur nam consequatur.
@@ -122,12 +234,35 @@
             <li class="portfolio-example-item transition">
               <a href="#" class="portfolio-example-link">
                 <div class="portfolio-overlay-thumb">
-                  <img
-                    src="./images/portfolio/example_2.jpg"
-                    alt="Example marketing"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/example_2_1x.jpg 1x,
+                        ./images/portfolio/example_2_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_2_tablet_1x.jpg 1x,
+                        ./images/portfolio/example_2_tablet_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_2_mobile_1x.jpg 1x,
+                        ./images/portfolio/example_2_mobile_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/example_2_1x.jpg"
+                      alt="Example app"
+                      width="396"
+                      height="300"
+                    />
+                  </picture>
                   <p class="portfolio-overlay transition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores vitae assumenda non consequuntur nam consequatur.
@@ -143,12 +278,35 @@
             <li class="portfolio-example-item transition">
               <a href="#" class="portfolio-example-link">
                 <div class="portfolio-overlay-thumb">
-                  <img
-                    src="./images/portfolio/example_3.jpg"
-                    alt="Example app"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/example_3_1x.jpg 1x,
+                        ./images/portfolio/example_3_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_3_tablet_1x.jpg 1x,
+                        ./images/portfolio/example_3_tablet_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_3_mobile_1x.jpg 1x,
+                        ./images/portfolio/example_3_mobile_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/example_3_1x.jpg"
+                      alt="Example app"
+                      width="396"
+                      height="300"
+                    />
+                  </picture>
                   <p class="portfolio-overlay transition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores vitae assumenda non consequuntur nam consequatur.
@@ -164,12 +322,35 @@
             <li class="portfolio-example-item transition">
               <a href="#" class="portfolio-example-link">
                 <div class="portfolio-overlay-thumb">
-                  <img
-                    src="./images/portfolio/example_4.jpg"
-                    alt="Example marketing"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/example_4_1x.jpg 1x,
+                        ./images/portfolio/example_4_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_4_tablet_1x.jpg 1x,
+                        ./images/portfolio/example_4_tablet_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_4_mobile_1x.jpg 1x,
+                        ./images/portfolio/example_4_mobile_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/example_4_1x.jpg"
+                      alt="Example app"
+                      width="396"
+                      height="300"
+                    />
+                  </picture>
                   <p class="portfolio-overlay transition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores vitae assumenda non consequuntur nam consequatur.
@@ -185,12 +366,35 @@
             <li class="portfolio-example-item transition">
               <a href="#" class="portfolio-example-link">
                 <div class="portfolio-overlay-thumb">
-                  <img
-                    src="./images/portfolio/example_5.jpg"
-                    alt="Example design"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/example_5_1x.jpg 1x,
+                        ./images/portfolio/example_5_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_5_tablet_1x.jpg 1x,
+                        ./images/portfolio/example_5_tablet_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_5_mobile_1x.jpg 1x,
+                        ./images/portfolio/example_5_mobile_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/example_5_1x.jpg"
+                      alt="Example app"
+                      width="396"
+                      height="300"
+                    />
+                  </picture>
                   <p class="portfolio-overlay transition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores vitae assumenda non consequuntur nam consequatur.
@@ -206,12 +410,35 @@
             <li class="portfolio-example-item transition">
               <a href="#" class="portfolio-example-link">
                 <div class="portfolio-overlay-thumb">
-                  <img
-                    src="./images/portfolio/example_6.jpg"
-                    alt="Example marketing"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/example_6_1x.jpg 1x,
+                        ./images/portfolio/example_6_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_6_tablet_1x.jpg 1x,
+                        ./images/portfolio/example_6_tablet_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_6_mobile_1x.jpg 1x,
+                        ./images/portfolio/example_6_mobile_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/example_6_1x.jpg"
+                      alt="Example app"
+                      width="396"
+                      height="300"
+                    />
+                  </picture>
                   <p class="portfolio-overlay transition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores vitae assumenda non consequuntur nam consequatur.
@@ -227,12 +454,35 @@
             <li class="portfolio-example-item transition">
               <a href="#" class="portfolio-example-link">
                 <div class="portfolio-overlay-thumb">
-                  <img
-                    src="./images/portfolio/example_7.jpg"
-                    alt="Example design"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/example_7_1x.jpg 1x,
+                        ./images/portfolio/example_7_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_7_tablet_1x.jpg 1x,
+                        ./images/portfolio/example_7_tablet_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_7_mobile_1x.jpg 1x,
+                        ./images/portfolio/example_7_mobile_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/example_7_1x.jpg"
+                      alt="Example app"
+                      width="396"
+                      height="300"
+                    />
+                  </picture>
                   <p class="portfolio-overlay transition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores vitae assumenda non consequuntur nam consequatur.
@@ -248,12 +498,35 @@
             <li class="portfolio-example-item transition">
               <a href="#" class="portfolio-example-link">
                 <div class="portfolio-overlay-thumb">
-                  <img
-                    src="./images/portfolio/example_8.jpg"
-                    alt="Example web site"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/example_8_1x.jpg 1x,
+                        ./images/portfolio/example_8_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_8_tablet_1x.jpg 1x,
+                        ./images/portfolio/example_8_tablet_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_8_mobile_1x.jpg 1x,
+                        ./images/portfolio/example_8_mobile_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/example_8_1x.jpg"
+                      alt="Example app"
+                      width="396"
+                      height="300"
+                    />
+                  </picture>
                   <p class="portfolio-overlay transition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores vitae assumenda non consequuntur nam consequatur.
@@ -269,12 +542,35 @@
             <li class="portfolio-example-item transition">
               <a href="#" class="portfolio-example-link">
                 <div class="portfolio-overlay-thumb">
-                  <img
-                    src="./images/portfolio/example_9.jpg"
-                    alt="Example web site"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/example_9_1x.jpg 1x,
+                        ./images/portfolio/example_9_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_9_tablet_1x.jpg 1x,
+                        ./images/portfolio/example_9_tablet_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/example_9_mobile_1x.jpg 1x,
+                        ./images/portfolio/example_9_mobile_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/example_9_1x.jpg"
+                      alt="Example app"
+                      width="396"
+                      height="300"
+                    />
+                  </picture>
                   <p class="portfolio-overlay transition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores vitae assumenda non consequuntur nam consequatur.
@@ -292,49 +588,51 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-conteiner-text">
-        <div>
-          <a href="./index.html" class="logo"
-            >Web<span class="footer-logo">Studio</span>
-          </a>
-          <p class="footer-text text">
-            Increase the flow of customers and sales for your business with
-            digital marketing & growth solutions.
-          </p>
-        </div>
+      <div class="container footer-conteiner">
+        <div class="footer-text-link-thumb">
+          <div class="footer-text-thumb">
+            <a href="./index.html" class="logo"
+              >Web<span class="footer-logo">Studio</span>
+            </a>
+            <p class="footer-text text">
+              Increase the flow of customers and sales for your business with
+              digital marketing & growth solutions.
+            </p>
+          </div>
 
-        <div class="footer-link">
-          <h2 class="footer-link-header">Social media</h2>
-          <ul class="footer-link-list list">
-            <li class="footer-link-item">
-              <a href="#" class="footer-soc-link transition">
-                <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/logo.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-link-item">
-              <a href="#" class="footer-soc-link transition">
-                <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/logo.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-link-item">
-              <a href="#" class="footer-soc-link transition">
-                <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/logo.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-link-item">
-              <a href="#" class="footer-soc-link transition">
-                <svg class="footer-soc-icon" width="24" height="24">
-                  <use href="./images/logo.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <div class="footer-link">
+            <h2 class="footer-link-header">Social media</h2>
+            <ul class="footer-link-list list">
+              <li class="footer-link-item">
+                <a href="#" class="footer-soc-link transition">
+                  <svg class="footer-soc-icon" width="24" height="24">
+                    <use href="./images/logo.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-link-item">
+                <a href="#" class="footer-soc-link transition">
+                  <svg class="footer-soc-icon" width="24" height="24">
+                    <use href="./images/logo.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-link-item">
+                <a href="#" class="footer-soc-link transition">
+                  <svg class="footer-soc-icon" width="24" height="24">
+                    <use href="./images/logo.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-link-item">
+                <a href="#" class="footer-soc-link transition">
+                  <svg class="footer-soc-icon" width="24" height="24">
+                    <use href="./images/logo.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <form class="footer-form">
@@ -359,5 +657,7 @@
         </form>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
