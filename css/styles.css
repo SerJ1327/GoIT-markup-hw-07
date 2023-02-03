@@ -177,11 +177,14 @@ body {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   padding-top: 80px;
   padding-bottom: 40px;
   background-color: var(--white-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .mob-menu-container {
@@ -241,13 +244,17 @@ body {
 .mob-menu-link {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1, 11;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--dark-color);
 }
 
 .mob-menu-link:hover,
-.mob-menu-link:active {
+.mob-menu-link:active,
+.mob-menu-tel-link:hover,
+.mob-menu-tel-link:focus,
+.mob-menu-email-link:hover,
+.mob-menu-email-link:focus {
   color: var(--present-state-color);
 }
 
@@ -266,7 +273,7 @@ body {
   font-size: 7.5vw;
   line-height: 1.11;
   letter-spacing: 0.01em;
-  color: #4d5ae5;
+  color: var(--primary-brand-color);
   font-style: normal;
   transition-property: color;
   margin-bottom: 40px;
@@ -846,7 +853,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--dark-color);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .modal-form-label {

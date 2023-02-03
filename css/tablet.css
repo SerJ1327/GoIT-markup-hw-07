@@ -10,11 +10,15 @@
   }
 
   /* ----------HEADER---------- */
+  .header-wrap {
+    padding-bottom: 10px;
+  }
+
   .header-list {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-left: 76px;
+    margin-left: 123px;
   }
 
   .header-link {
@@ -44,7 +48,7 @@
     border-radius: 2px;
     background-color: var(--present-state-color);
     left: 0;
-    bottom: -28px;
+    bottom: -20px;
     color: var(--present-state-color);
   }
 
@@ -206,5 +210,10 @@
 
   .portfolio-example-item {
     flex-basis: calc((100% - 24px) / 2);
+  }
+
+  /* ----------MODAL-------------- */
+  .modal {
+    width: 408px;
   }
 }
