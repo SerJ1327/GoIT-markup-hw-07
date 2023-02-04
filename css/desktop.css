@@ -1,18 +1,22 @@
 @media screen and (min-width: 1200px) {
-  .header,
-  .hero,
-  .benefits,
-  .examples,
-  .team,
-  .customers,
-  .footer,
-  .portfolio {
+  .header-container,
+  .hero-container,
+  .benefits-container,
+  .examples-container,
+  .team-container,
+  .customers-container,
+  .footer-conteiner,
+  .portfolio-container {
     width: 1440px;
   }
 
   /* ----------HEADER---------- */
-  .header-wrap {
-    padding-bottom: 28px;
+  .header {
+    padding-bottom: 27px;
+  }
+
+  .header-container {
+    height: 24px;
   }
 
   .header-list {
@@ -155,6 +159,7 @@
 
   .footer-text-link-thumb {
     gap: 120px;
+    margin-bottom: 0;
   }
 
   .footer-form {

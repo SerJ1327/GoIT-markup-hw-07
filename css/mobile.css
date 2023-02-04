@@ -1,16 +1,23 @@
 @media screen and (min-width: 480px) {
-  .header,
-  .hero,
-  .benefits,
-  .team,
-  .customers,
-  .footer,
-  .portfolio {
+  .header-container,
+  .hero-container,
+  .benefits-container,
+  .team-container,
+  .customers-container,
+  .footer-conteiner,
+  .portfolio-container {
     width: 428px;
   }
 
+  /*------------HERO----------------- */
+
   .mob-menu-tel-link {
     font-size: 36px;
+  }
+
+  /* -----------BENEFITS-------------- */
+  .benefits-item {
+    width: 396px;
   }
 
   /* ----------CUSTOMERS-------------- */
