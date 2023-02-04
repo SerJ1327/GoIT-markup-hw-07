@@ -535,10 +535,6 @@ body {
   margin: 0 auto;
 }
 
-.footer-text-link-thumb {
-  margin-bottom: 72px;
-}
-
 .footer-text-thumb {
   margin-bottom: 72px;
 }
@@ -987,4 +983,10 @@ textarea::placeholder {
 .modal-form-send:focus {
   background-color: var(--present-state-color);
   border-color: var(--present-state-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-text-link-thumb {
+    margin-bottom: 72px;
+  }
 }
