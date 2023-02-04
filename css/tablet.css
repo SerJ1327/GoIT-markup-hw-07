@@ -4,7 +4,7 @@
   .benefits-container,
   .team-container,
   .customers-container,
-  .footer-conteiner,
+  .footer-container,
   .portfolio-container {
     width: 768px;
   }
@@ -230,5 +230,15 @@
   /* ----------MODAL-------------- */
   .modal {
     width: 408px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-container {
+    padding-left: 108px;
+  }
+
+  .footer-text-link-thumb {
+    margin-bottom: 72px;
   }
 }
